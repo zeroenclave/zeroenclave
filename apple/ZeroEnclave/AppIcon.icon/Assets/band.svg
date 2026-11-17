@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="band" x1="0" y1="392" x2="0" y2="632" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#363636"/>
+      <stop offset="0.5" stop-color="#7A7A78"/>
+      <stop offset="1" stop-color="#363636"/>
+    </linearGradient>
+  </defs>
+  <path d="M768 264 L768 344 L384 760 L256 760 L256 680 L640 264 Z" fill="url(#band)"/>
+</svg>

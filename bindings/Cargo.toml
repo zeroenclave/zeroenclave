@@ -1,0 +1,23 @@
+[package]
+name = "zeroenclave-ffi"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-only"
+publish = false
+
+[lib]
+name = "zeroenclave_ffi"
+crate-type = ["staticlib", "lib"]
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+[dependencies]
+thiserror = "2.0.17"
+uniffi = { version = "=0.32.2", features = ["cli"] }
+zeroenclave-core = { path = "../core" }
+zeroize = "1.8.2"
+
+[dev-dependencies]
+tempfile = "3.27.0"

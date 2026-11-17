@@ -1,0 +1,146 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSCameraUsageDescription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Kamera nimmt Fotos und Videos direkt in deinen verschlüsselten Tresor auf. Nichts wird in deiner Fotomediathek gespeichert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The camera takes photos and videos directly into your encrypted vault. Nothing is saved to your photo library."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La cámara hace fotos y vídeos directamente en tu bóveda cifrada. No se guarda nada en tu fototeca."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’appareil photo prend des photos et des vidéos directement dans votre coffre-fort chiffré. Rien n’est enregistré dans votre photothèque."
+          }
+        }
+      }
+    },
+    "NSFaceIDUsageDescription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID entsperrt deinen Tresor, ohne dass du das Master-Passwort eingeben musst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID unlocks your vault without typing the master password."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID desbloquea tu bóveda sin escribir la contraseña maestra."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID déverrouille votre coffre-fort sans saisir le mot de passe principal."
+          }
+        }
+      }
+    },
+    "NSMicrophoneUsageDescription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Mikrofon nimmt den Ton für Videos auf, die du in Zero Enclave aufnimmst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The microphone records sound for videos you take in Zero Enclave."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El micrófono graba el sonido de los vídeos que haces en Zero Enclave."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le micro enregistre le son des vidéos que vous prenez dans Zero Enclave."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave saves a photo or video to your photo library only when you choose to export it from the vault."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave sichert ein Foto oder Video nur dann in deiner Fotomediathek, wenn du es aus dem Tresor exportierst."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave solo guarda una foto o un vídeo en tu fototeca cuando decides exportarlo desde la bóveda."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave enregistre une photo ou une vidéo dans votre photothèque uniquement lorsque vous choisissez de l’exporter depuis le coffre-fort."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave only uses your photo library to delete the originals you chose to remove after importing them into the vault."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave nutzt deine Fotomediathek nur, um Originale zu löschen, die du nach dem Import in den Tresor entfernen möchtest."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave solo usa tu fototeca para eliminar los originales que has decidido quitar tras importarlos a la bóveda."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zero Enclave utilise votre photothèque uniquement pour supprimer les originaux que vous avez choisi de retirer après leur importation dans le coffre-fort."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

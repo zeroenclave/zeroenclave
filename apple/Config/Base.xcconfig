@@ -1,0 +1,10 @@
+// Shared build settings. Machine-specific values go into Local.xcconfig (not committed).
+CURRENT_PROJECT_VERSION = 1
+DEVELOPMENT_TEAM =
+
+// Store builds leave this empty: no announced, unfinished features in the binary.
+// Preview builds set ZE_PREVIEW_CONDITIONS = ZE_PREVIEW in Local.xcconfig.
+ZE_PREVIEW_CONDITIONS =
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) $(ZE_PREVIEW_CONDITIONS)
+
+#include? "Local.xcconfig"

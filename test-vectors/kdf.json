@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "auth_key": "49f8575696731bbb50c243ac3c7e7b7ba9ab6ae96a53fcd8c37eda0417c09871",
+      "duress_tag": "d2bbda4dfbb75e5c4b9523285a2b06f0b3f707868c42ddf0c49f992fb90bac9a",
+      "m_kib": 65536,
+      "master_key": "853b272a44db1421c02962669a55eb0994f3cab385ed1c4c79253eee19bab49e",
+      "name": "ascii",
+      "p": 4,
+      "password_kek": "0d0ff1d56cceb3188d938edceebf715aed306f94c339226e468b83b9b16ee969",
+      "password_utf8_hex": "636f727265637420686f727365206261747465727920737461706c65",
+      "salt": "000102030405060708090a0b0c0d0e0f",
+      "t": 3,
+      "vault_id": "101112131415161718191a1b1c1d1e1f"
+    },
+    {
+      "auth_key": "cd48b00506cb78c4d3c2ecf022e8a6384fc0d269726fabcd46119cf68359a277",
+      "duress_tag": "4620d9aa924902b696c8a67411329edc685f447fbcff54ebad975ffdc7687b0b",
+      "m_kib": 65536,
+      "master_key": "d5ce2793abda8ae3d76746a520bd841f142fcdba5e246776e8a46d3060387aa6",
+      "name": "german_nfc",
+      "p": 4,
+      "password_kek": "7119947083ea1eebf3baeebcd8471c09681686ae0a677a32ae53edb8855ce8e8",
+      "password_utf8_hex": "4772c3b6c39f652dc3bc6265722dc3847066656c2d32303234",
+      "salt": "202122232425262728292a2b2c2d2e2f",
+      "t": 3,
+      "vault_id": "303132333435363738393a3b3c3d3e3f"
+    },
+    {
+      "auth_key": "cd48b00506cb78c4d3c2ecf022e8a6384fc0d269726fabcd46119cf68359a277",
+      "duress_tag": "4620d9aa924902b696c8a67411329edc685f447fbcff54ebad975ffdc7687b0b",
+      "m_kib": 65536,
+      "master_key": "d5ce2793abda8ae3d76746a520bd841f142fcdba5e246776e8a46d3060387aa6",
+      "name": "german_nfd",
+      "p": 4,
+      "password_kek": "7119947083ea1eebf3baeebcd8471c09681686ae0a677a32ae53edb8855ce8e8",
+      "password_utf8_hex": "47726fcc88c39f652d75cc886265722d41cc887066656c2d32303234",
+      "salt": "202122232425262728292a2b2c2d2e2f",
+      "t": 3,
+      "vault_id": "303132333435363738393a3b3c3d3e3f"
+    }
+  ]
+}

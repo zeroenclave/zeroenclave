@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "encoded": "0000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0009-J3QF",
+      "name": "zero",
+      "recovery_kek": "0bd98e8f9131e2550c3646dfe6a05a6dc19cc9f478f019666cf0a7157be51e1e",
+      "recovery_key": "0000000000000000000000000000000000000000000000000000000000000000",
+      "vault_id": "404142434445464748494a4b4c4d4e4f"
+    },
+    {
+      "encoded": "ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZN-ZP9T",
+      "name": "ones",
+      "recovery_kek": "1d2d6ab5636b54116fdb5cdc6a37d5e9a15965ceb511707c7d6e568b8a907647",
+      "recovery_key": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "vault_id": "505152535455565758595a5b5c5d5e5f"
+    },
+    {
+      "encoded": "0C51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS2",
+      "name": "mixed",
+      "recovery_kek": "399818b894b5dfdee87cba55d7c5b62f5b72aa97781caab22d4b4eeb93ad66a6",
+      "recovery_key": "030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dc",
+      "vault_id": "606162636465666768696a6b6c6d6e6f"
+    }
+  ],
+  "invalid": [
+    {
+      "error": "format",
+      "input": ""
+    },
+    {
+      "error": "format",
+      "input": "0C51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS"
+    },
+    {
+      "error": "format",
+      "input": "0C51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS22"
+    },
+    {
+      "error": "format",
+      "input": "UC51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS2"
+    },
+    {
+      "error": "format",
+      "input": "#C51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS2"
+    },
+    {
+      "error": "checksum",
+      "input": "1000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0000-0009-J3QF"
+    },
+    {
+      "error": "checksum",
+      "input": "0C51-260Z-4RPK-8ET2-9585-EQK5-DHSQ-N0C8-HYB9-V95B-PAWW-1HYE-TQE8-VJS3"
+    }
+  ],
+  "lenient": [
+    {
+      "input": "oooo oooo oooo oooo oooo oooo oooo oooo oooo oooo oooo oooo ooo9 j3qf",
+      "recovery_key": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

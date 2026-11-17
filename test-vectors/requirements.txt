@@ -1,0 +1,3 @@
+argon2-cffi==25.1.0
+cbor2==6.2.1
+cryptography==50.0.2

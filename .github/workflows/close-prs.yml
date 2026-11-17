@@ -1,0 +1,20 @@
+name: Close pull requests
+
+# The public repository only receives release snapshots; pull requests are not accepted.
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close:
+    if: github.repository == 'zeroenclave/zeroenclave'
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          gh pr close "$PR" --repo "$GITHUB_REPOSITORY" --comment "Thanks! Pull requests are not accepted for now, see CONTRIBUTING.md. Please describe the change in an issue instead."

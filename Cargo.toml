@@ -1,0 +1,20 @@
+[workspace]
+members = ["core", "bindings"]
+resolver = "2"
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.test]
+opt-level = 1
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+# Local iOS builds: release without LTO for faster links.
+[profile.ios-dev]
+inherits = "release"
+opt-level = 3
+lto = false
+codegen-units = 16

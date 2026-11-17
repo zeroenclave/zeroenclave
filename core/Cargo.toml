@@ -1,0 +1,43 @@
+[package]
+name = "zeroenclave-core"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-only"
+publish = false
+
+[features]
+# Exposes key bytes and fixed-input constructors for vector generation. Never enable in release builds.
+test-vectors = []
+
+[dependencies]
+aes-gcm = { version = "0.10.3", default-features = false, features = ["aes", "alloc", "zeroize"] }
+# Only to enable zeroize-on-drop of the AES key schedule and the GHASH key (crypto §11).
+aes = { version = "0.8.4", default-features = false, features = ["zeroize"] }
+argon2 = { version = "0.5.3", default-features = false, features = ["alloc", "zeroize"] }
+getrandom = "0.3.4"
+ghash = { version = "0.5.1", default-features = false, features = ["zeroize"] }
+hmac = "0.12.1"
+hkdf = "0.12.4"
+minicbor = { version = "2.3.1", features = ["alloc", "derive"] }
+# Keep the portable POLYVAL backend: the ARMv8 one (`--cfg polyval_armv8`) does not zeroize.
+polyval = { version = "0.6.2", default-features = false, features = ["zeroize"] }
+sha2 = "0.10.9"
+subtle = "2.6.1"
+thiserror = "2.0.17"
+unicode-normalization = "0.1.24"
+zeroize = { version = "1.8.2", features = ["derive"] }
+zxcvbn = { version = "3.1.1", default-features = false }
+
+[dev-dependencies]
+hex = "0.4.3"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+tempfile = "3.27.0"
+
+[[example]]
+name = "gen_vectors"
+required-features = ["test-vectors"]
+
+[[test]]
+name = "vectors"
+required-features = ["test-vectors"]

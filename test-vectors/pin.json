@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "name": "zeros",
+      "pin": "000000",
+      "pin_key": "60f83d503bcd6ffdb8a4bce7f0cded78e6839eef25465e87dee5a457820bb868",
+      "se_secret": "0000000000000000000000000000000000000000000000000000000000000000",
+      "vault_id": "707172737475767778797a7b7c7d7e7f"
+    },
+    {
+      "name": "digits",
+      "pin": "482916",
+      "pin_key": "020d397ea286a3bce5d46f71bdb728ad26c42a13e35d99ec4ed6170b7eac7403",
+      "se_secret": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "vault_id": "808182838485868788898a8b8c8d8e8f"
+    },
+    {
+      "name": "digits_other",
+      "pin": "482917",
+      "pin_key": "444934bfd7110470df38ccacde3a973231a518aac5ad4596d2b9dd0a7458cc3d",
+      "se_secret": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "vault_id": "808182838485868788898a8b8c8d8e8f"
+    }
+  ]
+}

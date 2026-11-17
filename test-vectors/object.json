@@ -1,0 +1,235 @@
+{
+  "cases": [
+    {
+      "body_first64": "46a719bf59e6fd2e3ea10c2f3f6a445b",
+      "file_len": 127,
+      "file_sha256": "19c9b59244cfac266c2edfa5d05cd15f4b0a3f55119c10e08030fb7c6abf5cb9",
+      "header": "5a454e4f00010100101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f00100000d2415c41d263ebb85c84b79658f4aba6be5a133a3e4769daf2b196a0bccd126cafd72a6bb8240f96f336c96086d881e455083d2c0825e582b2c9e918b9b824407e7298",
+      "kind": 1,
+      "name": "empty",
+      "object_id": "202122232425262728292a2b2c2d2e2f",
+      "plaintext_len": 0,
+      "plaintext_rule": "byte i = i mod 251",
+      "seed_utf8": "object-seed-empty",
+      "vault_id": "101112131415161718191a1b1c1d1e1f",
+      "vault_key": "a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf"
+    },
+    {
+      "body_first64": "1ed1242a7b9ea3bacfcbb17521b44b0bcaf3c1a7c5d22512122f3f05a2bfa5f99a8420a64b34a8b1dc55a64b866a1f092e96fbf51b",
+      "file_len": 164,
+      "file_sha256": "63e7c0e0e8a34974e9dab6d05b57ed02f57491b7cf3144143b181202905c2d94",
+      "header": "5a454e4f00010100101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f00100000a7ecc09541e0184b34daf6c5ebc0436604564e89eb3a68f1dafa63986baced37530ec610d230f28ef3d96f2ffe62755f6ae87596f881e2403846fb71414bed96a4d6c1",
+      "kind": 1,
+      "name": "short",
+      "object_id": "202122232425262728292a2b2c2d2e2f",
+      "plaintext_len": 37,
+      "plaintext_rule": "byte i = i mod 251",
+      "seed_utf8": "object-seed-short",
+      "vault_id": "101112131415161718191a1b1c1d1e1f",
+      "vault_key": "a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf"
+    },
+    {
+      "body_first64": "88ba852ec2e296b5fb715ff250dfdbe3eecf8f9e1bc33a31835b65f502a171b03a0bbfdd7421024152faadc23b66257b01f5d9f304ddbb4824c23a854e3f668c",
+      "file_len": 1048724,
+      "file_sha256": "11ee8d97278c6bf782843fbd8c369c0fe2d8ffdf26d4027b5c857e77efe6d100",
+      "header": "5a454e4f00010100101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f001000006ea0789486d8320849ee59f18f2987442a9b809dbf2c8828dfc7cb3bbad442f8066883e05ab307d89d625576c6f8917bb64b5098712393f8dbab24fbde5f1f0e5b0dda",
+      "kind": 1,
+      "name": "two_chunks",
+      "object_id": "202122232425262728292a2b2c2d2e2f",
+      "plaintext_len": 1048581,
+      "plaintext_rule": "byte i = i mod 251",
+      "seed_utf8": "object-seed-two_chunks",
+      "vault_id": "101112131415161718191a1b1c1d1e1f",
+      "vault_key": "a0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebf"
+    }
+  ],
+  "invalid": [
+    {
+      "append_first_chunk": false,
+      "case": "two_chunks",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "truncate_at_chunk_boundary",
+      "truncate_to": 1048703,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": true,
+      "case": "two_chunks",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "append_chunk",
+      "truncate_to": null,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": false,
+      "case": "two_chunks",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "flip_body_bit",
+      "truncate_to": null,
+      "xor_offset": 121,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "two_chunks",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "flip_last_chunk_bit",
+      "truncate_to": null,
+      "xor_offset": 1048705,
+      "xor_value": 128
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "flip_wrapped_dek",
+      "truncate_to": null,
+      "xor_offset": 100,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "flip_nonce_prefix",
+      "truncate_to": null,
+      "xor_offset": 46,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "mismatch",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "flip_object_id_in_header",
+      "truncate_to": null,
+      "xor_offset": 30,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "empty",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "header_only",
+      "truncate_to": 111,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "corrupt",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "truncate_into_tag",
+      "truncate_to": 163,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "short_header",
+      "truncate_to": 50,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "bad_magic",
+      "truncate_to": null,
+      "xor_offset": 0,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "bad_version",
+      "truncate_to": null,
+      "xor_offset": 5,
+      "xor_value": 2
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "kind_snapshot",
+      "truncate_to": null,
+      "xor_offset": 6,
+      "xor_value": 2
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "reserved_nonzero",
+      "truncate_to": null,
+      "xor_offset": 7,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "format",
+      "expect_object_id": null,
+      "expect_vault_id": null,
+      "name": "bad_chunk_size",
+      "truncate_to": null,
+      "xor_offset": 41,
+      "xor_value": 1
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "mismatch",
+      "expect_object_id": null,
+      "expect_vault_id": "707172737475767778797a7b7c7d7e7f",
+      "name": "other_vault",
+      "truncate_to": null,
+      "xor_offset": null,
+      "xor_value": null
+    },
+    {
+      "append_first_chunk": false,
+      "case": "short",
+      "error": "mismatch",
+      "expect_object_id": "808182838485868788898a8b8c8d8e8f",
+      "expect_vault_id": null,
+      "name": "other_object_id",
+      "truncate_to": null,
+      "xor_offset": null,
+      "xor_value": null
+    }
+  ]
+}

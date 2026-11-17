@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Critical bug or security vulnerability
+    url: https://github.com/zeroenclave/zeroenclave/blob/main/SECURITY.md
+    about: Encryption flaws, data exposure, or a vault that no longer opens. Report privately by email, never in a public issue.
